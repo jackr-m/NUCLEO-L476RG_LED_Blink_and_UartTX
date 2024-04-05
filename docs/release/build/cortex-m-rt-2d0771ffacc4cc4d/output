@@ -1,0 +1,3 @@
+cargo:rustc-link-search=/Users/jack7/RustroverProjects/stm32l476rg/docs/release/build/cortex-m-rt-2d0771ffacc4cc4d/out
+cargo:rerun-if-changed=build.rs
+cargo:rerun-if-changed=link.x.in

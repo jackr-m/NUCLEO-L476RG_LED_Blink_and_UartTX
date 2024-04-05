@@ -1,0 +1,1 @@
+window.SIDEBAR_ITEMS = {"fn":["__cortex_m_rt_main","__embassy_main","__make_static"]};

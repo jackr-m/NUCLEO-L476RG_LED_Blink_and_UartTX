@@ -1,0 +1,6 @@
+cargo:rustc-link-search=/Users/jack7/RustroverProjects/stm32l476rg/docs/thumbv7em-none-eabihf/release/build/stm32l476rg-75f99b080e135028/out
+cargo:rerun-if-changed=memory.x
+cargo:rustc-link-arg-bins=--nmagic
+cargo:rustc-link-arg-bins=-Tlink.x
+cargo:rustc-link-arg-bins=-Tdefmt.x
+cargo:rustc-env=DEFMT_LOG=info
