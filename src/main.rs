@@ -12,7 +12,7 @@ use embassy_time::Timer;
 use embassy_stm32::usart::{Config, UartTx};
 // use embassy_stm32::time::Hertz;
 
-// use {defmt_rtt as _, panic_probe as _};
+use {defmt_rtt as _, panic_probe as _};
 
 
 #[embassy_executor::main]
@@ -39,7 +39,7 @@ async fn main(_spawner: Spawner) {
         let remaining_capacity = msg.capacity() - msg.len();
         if remaining_capacity >= MAX_STRING_LENGTH {
             core::writeln!(&mut msg, "LED has blinked {} times", loop_counter).unwrap();
-            usart.blocking_write(msg.as_bytes()).unwrap();    
+            usart.blocking_write(msg.as_bytes()).unwrap();
         }
         
         Timer::after_millis(200).await;
