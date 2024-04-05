@@ -700,6 +700,7 @@ dependencies = [
  "embedded-io",
  "embedded-io-async",
  "embedded-storage",
+ "heapless",
  "panic-probe",
 ]
 

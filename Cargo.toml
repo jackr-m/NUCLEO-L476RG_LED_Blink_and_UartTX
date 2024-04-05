@@ -5,6 +5,21 @@ version = "0.1.0"
 authors = ["jack7"]
 resolver = "2"
 
+[profile.release]
+lto = true
+opt-level = "s"
+incremental = false
+codegen-units = 1
+# note: debug = true is okay - debuginfo isn't flashed to the device!
+debug = true
+
+[profile.dev]
+lto = "thin"
+opt-level = "s"
+incremental = true
+# note: debug = true is okay - debuginfo isn't flashed to the device!
+debug = true
+
 [dependencies]
 defmt = "0.3"
 defmt-rtt = "0.4"
@@ -23,4 +38,5 @@ embassy-sync = { version = "0.5.0" }
 embassy-time = { version = "0.3.0", features = ["defmt", "defmt-timestamp-uptime"] }
 
 cortex-m = { version = "0.7.6", features = ["critical-section-single-core"] }
-embassy-stm32 = { version = "0.1.0", features = ["defmt", "stm32h743zi", "unstable-pac", "memory-x", "time-driver-any" ]  }
+embassy-stm32 = { version = "0.1.0", features = ["defmt", "stm32l476rg", "unstable-pac", "memory-x", "time-driver-any" ]  }
+heapless = "0.8.0"
