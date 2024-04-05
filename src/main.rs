@@ -12,6 +12,7 @@ use embassy_time::Timer;
 use embassy_stm32::usart::{Config, UartTx};
 // use embassy_stm32::time::Hertz;
 
+//noinspection RsUnusedImport
 use {defmt_rtt as _, panic_probe as _};
 
 
