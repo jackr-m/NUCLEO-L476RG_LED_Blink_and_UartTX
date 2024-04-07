@@ -1,3 +1,8 @@
+[[bin]] # prevent "Can't find crate for 'test'" error
+name = "stm32l476rg"
+test = false
+bench = false
+
 [package]
 edition = "2021"
 name = "stm32l476rg"
